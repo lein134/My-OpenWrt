@@ -32,6 +32,8 @@ sed -i 's/<%:Down%>/<%:Move down%>/g' feeds/luci/modules/luci-compat/luasrc/view
 #sed -i 's/luci-theme-argon/luci-theme-bootstrap/g' feeds/luci/collections/luci-ssl-nginx/Makefile
 
 # 拉取passwall
+rm -rf feeds/luci/applications/luci-app-passwall
+rm -rf feeds/packages/net/{xray-core,v2ray-geodata,sing-box,chinadns-ng,dns2socks,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-libev,shadowsocks-rust,shadowsocksr-libev,simple-obfs,tcping,trojan-plus,tuic-client,v2ray-plugin,xray-plugin,geoview}
 git clone https://github.com/xiaorouji/openwrt-passwall --depth=1 package/passwall
 git clone https://github.com/xiaorouji/openwrt-passwall2 --depth=1 package/passwall2
 git clone https://github.com/xiaorouji/openwrt-passwall-packages
