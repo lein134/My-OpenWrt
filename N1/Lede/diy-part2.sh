@@ -11,12 +11,12 @@
 #
 
 # Modify default IP   第一行19.07的路径   第二行23.05的路径
-#sed -i 's/192.168.1.1/192.168.123.2/g' package/base-files/files/bin/config_generate
-sed -i 's/192.168.1.1/192.168.123.2/g' package/base-files/luci2/bin/config_generate
+#sed -i 's/192.168.1.1/192.168.6.50/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.6.50/g' package/base-files/luci2/bin/config_generate
 
 # 修改主机名
-#sed -i 's/LEDE/OpenWrt/g' package/base-files/files/bin/config_generate
-sed -i 's/LEDE/OpenWrt/g' package/base-files/luci2/bin/config_generate
+#sed -i 's/LEDE/N1/g' package/base-files/files/bin/config_generate
+sed -i 's/LEDE/N1/g' package/base-files/luci2/bin/config_generate
 
 # 修正俩处错误的翻译
 sed -i 's/<%:Up%>/<%:Move up%>/g' feeds/luci/modules/luci-compat/luasrc/view/cbi/tblsection.htm
