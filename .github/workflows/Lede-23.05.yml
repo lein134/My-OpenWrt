@@ -11,7 +11,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: N1/Lede/LE-feeds.conf.default
-  CONFIG_FILE: N1/Lede/LE-mini.config
+  CONFIG_FILE: N1/Lede/2025-0326.config
   DIY_P1_SH: N1/Lede/diy-part1.sh
   DIY_P2_SH: N1/Lede/diy-part2.sh
   FILES: N1/Lede/files
@@ -187,7 +187,7 @@ jobs:
               
               源码: ${{ env.REPO_URL }}
               分支: ${{ env.REPO_BRANCH }}
-              注意：默认旁路由模式
+              注意：默认旁路由模式且没有开启DHCP
               
               网关：192.168.123.2
               用户名：root
@@ -199,6 +199,8 @@ jobs:
               2025-0313：取消几个用不到的插件，更换24.04编译环境同时更新依赖。
               2025-0314：同步上游的更新。
               2025-0324：更新passwall2，nikki的配置文件。
+              2025-0401：更新config文件，增加firewall4插件。
+              2025-0411：测试有无nikki插件。
 
     - name: 删除运行记录
       uses: Mattraks/delete-workflow-runs@main
